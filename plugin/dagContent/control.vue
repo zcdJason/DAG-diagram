@@ -1,6 +1,6 @@
 <template>
   <g>
-    <foreignObject width="200px" height="30px" style="position: relative">
+    <foreignObject width="150px" height="30px" style="position: relative">
       <body xmlns="http://www.w3.org/1999/xhtml">
       <div class="control_menu">
         <span @click="changeModelRunningStatus">
