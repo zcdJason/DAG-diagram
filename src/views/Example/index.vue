@@ -2,16 +2,16 @@
   <div class="page-content" @mousedown="startNodesBus($event)" @mousemove="moveNodesBus($event)" @mouseup="endNodesBus($event)">
     <div class="page-left">
       <div class="logo">DAG-Board</div>
-      <el-tree :data="leads" :props="defaultProps" @node-click="handleNodeClick"></el-tree>
+      <el-tree :data="leads" :props="defaultProps" @node-click="handleNodeClick"/>
     </div>
     <div class="headbar">
       <p @mousedown="dragIt('drag name')">drag node</p>
       <span class="changeVersion" @click="changeVersion">change direction</span>
       <span class="saveChange" @click="saveChange">save change</span>
     </div>
-    <DAGBoard :DataAll="DataAll" @updateDAG="updateDAG" @editNodeDetails="editNodeDetails" @doSthPersonal="doSthPersonal"></DAGBoard>
+    <DAGBoard :DataAll="DataAll" @updateDAG="updateDAG" @editNodeDetails="editNodeDetails" @doSthPersonal="doSthPersonal"/>
     <node-bus v-if="dragBus" :value="busValue.value" :pos_x="busValue.pos_x" :pos_y="busValue.pos_y" />
-    <editor  ref='myEditor' class="json-editor" v-model="jsonEditor" :options="options"  @init="editorInit" lang="json" theme="chrome" width="400" height="100%"></editor>
+    <editor  ref='myEditor' class="json-editor" v-model="jsonEditor" :options="options"  @init="editorInit" lang="json" theme="chrome" width="400" height="100%"/>
   </div>
 </template>
 

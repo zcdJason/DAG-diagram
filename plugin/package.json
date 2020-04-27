@@ -1,7 +1,8 @@
 {
   "name": "new-dag-board",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "a plugin to show DAG graph . 用于流程图或者DAG图展示. fork with murongqimiao, bug-fix icon",
+
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
