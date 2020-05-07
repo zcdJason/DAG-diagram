@@ -1,6 +1,6 @@
 {
-  "name": "new-dag-board",
-  "version": "1.0.5",
+  "name": "dag-board2",
+  "version": "1.0.2",
   "description": "a plugin to show DAG graph . 用于流程图或者DAG图展示. fork with murongqimiao, bug-fix icon",
 
   "main": "index.js",
@@ -13,5 +13,6 @@
     "graph"
   ],
   "author": "murongqimiao@live.cn",
+  "bugfix": "zcd_86@163.com",
   "license": "ISC"
 }

@@ -2,7 +2,7 @@
 <template>
   <div class="nodesBus-contain" :style="{left: this.pos_x + 90 + 'px', top: this.pos_y + 30 + 'px' }">
     <div class="nodesBus">
-      <span class="icon"></span>
+      <span class="icon"/>
       <span class="name">{{ value }}</span>
     </div>
   </div>

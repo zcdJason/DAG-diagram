@@ -23,7 +23,7 @@
                 </span>
         <span @click="sizeInit">
                   <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-icon-test"/>
+                        <use xlink:href="#icon-test"/>
                   </svg>
                 </span>
         <span :class="['sel_area', 'sel_area_ing'].indexOf(currentEvent) !== -1 ? 'sel_ing' : ''"
