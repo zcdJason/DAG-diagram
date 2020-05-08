@@ -26,7 +26,7 @@
           @changeNodeName="changeNodeName"
           @linkEnd="linkEnd"
           @linkPre="linkPre"
-        ></main-body>
+        />
       </g>
       <Arrow v-for="(each, n) in DataAll.edges" :key="'____' + n" :DataAll="DataAll" @delEdge="delEdge" :each="each"
              :index="n"/>
@@ -37,7 +37,9 @@
     <EditArea @editNodeDetails="editNodeDetails" :isEditAreaShow="is_edit_area" @nodesPersonalEvent="nodesPersonalEvent"
               @delNode="delNode" @changePort="changePort" @close_click_nodes="close_click_nodes"/>
     <Control @changeModelRunningStatus="changeModelRunningStatus" @sizeInit="sizeInit" @sizeExpend="sizeExpend"
-             @sizeShrink="sizeShrink" @sel_area="sel_area" :modelRunningStatus="modelRunningStatus"
+             @sizeShrink="sizeShrink"
+             @debugOP="debugOp"
+             @sel_area="sel_area" :modelRunningStatus="modelRunningStatus"
              :currentEvent="currentEvent"/>
   </svg>
 </template>
@@ -438,6 +440,12 @@
         }
       },
       /**
+       * 执行debug操作
+       */
+       debugOp() {
+        this.$emit('updateDAG', this.DataAll, 'debugOp')
+      },
+       /**
        * 数据层逻辑
        */
       // 模型激活

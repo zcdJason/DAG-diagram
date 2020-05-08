@@ -5,38 +5,43 @@
       <div class="control_menu">
         <span @click="changeModelRunningStatus">
           <svg v-if="modelRunningStatus" class="icon" aria-hidden="true">
-            <use xlink:href="#icon-pause"/>
+            <use xlink:href="#icon-stop"/>
           </svg>
           <svg v-else class="icon" aria-hidden="true">
             <use xlink:href="#icon-play"/>
           </svg>
         </span>
+        <span @click="debugEvent">
+                  <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-debug"/>
+                  </svg>
+        </span>
         <span @click="sizeExpend">
                   <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-ZoomIn"/>
                   </svg>
-                </span>
+        </span>
         <span @click="sizeShrink">
                   <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-suoxiao"/>
                   </svg>
-                </span>
+        </span>
         <span @click="sizeInit">
                   <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-test"/>
                   </svg>
-                </span>
+        </span>
         <span :class="['sel_area', 'sel_area_ing'].indexOf(currentEvent) !== -1 ? 'sel_ing' : ''"
               @click="sel_area($event)">
                   <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-duoxuan"/>
                   </svg>
-                </span>
+        </span>
         <span @click="fullScreen">
                   <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-quanping"/>
                   </svg>
-                </span>
+        </span>
       </div>
       </body>
     </foreignObject>
@@ -92,6 +97,9 @@
       },
       changeModelRunningStatus() {
         this.$emit('changeModelRunningStatus', !this.modelRunningStatus)
+      },
+      debugEvent() {
+        this.$emit('debugOP')
       }
     }
   };
@@ -100,7 +108,7 @@
 <style scoped>
   .control_menu {
     height: 30px;
-    width: 150px;
+    width: 180px;
     background: #cccccc;
     justify-content: space-around;
     display: flex;
