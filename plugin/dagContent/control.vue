@@ -11,9 +11,9 @@
             <use xlink:href="#icon-play"/>
           </svg>
         </span>
-        <span @click="debugEvent">
+        <span @click="testFlow">
                   <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-debug"/>
+                        <use xlink:href="#icon-test1"/>
                   </svg>
         </span>
         <span @click="sizeExpend">
@@ -98,8 +98,8 @@
       changeModelRunningStatus() {
         this.$emit('changeModelRunningStatus', !this.modelRunningStatus)
       },
-      debugEvent() {
-        this.$emit('debugOP')
+      testFlow() {
+        this.$emit('testFlow')
       }
     }
   };

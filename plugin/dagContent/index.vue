@@ -38,7 +38,7 @@
               @delNode="delNode" @changePort="changePort" @close_click_nodes="close_click_nodes"/>
     <Control @changeModelRunningStatus="changeModelRunningStatus" @sizeInit="sizeInit" @sizeExpend="sizeExpend"
              @sizeShrink="sizeShrink"
-             @debugOP="debugOp"
+             @testFlow="testFlow"
              @sel_area="sel_area" :modelRunningStatus="modelRunningStatus"
              :currentEvent="currentEvent"/>
   </svg>
@@ -442,8 +442,8 @@
       /**
        * 执行debug操作
        */
-       debugOp() {
-        this.$emit('updateDAG', this.DataAll, 'debugOp')
+      testFlow() {
+        this.$emit('updateDAG', this.DataAll, 'testFlow')
       },
        /**
        * 数据层逻辑
