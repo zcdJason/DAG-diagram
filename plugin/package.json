@@ -1,7 +1,7 @@
 {
   "name": "dag-board2",
-  "version": "1.0.2",
-  "description": "a plugin to show DAG graph . 用于流程图或者DAG图展示. fork with murongqimiao, bug-fix icon",
+  "version": "1.0.5",
+  "description": "a plugin to show DAG graph . 用于流程图或者DAG图展示. fork with murongqimiao, add testFlow event",
 
   "main": "index.js",
   "scripts": {

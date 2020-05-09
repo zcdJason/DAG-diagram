@@ -11,7 +11,7 @@
             <use xlink:href="#icon-play"/>
           </svg>
         </span>
-        <span @click="testFlow">
+        <span @click="test">
                   <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-test1"/>
                   </svg>
@@ -70,6 +70,9 @@
       };
     },
     methods: {
+      test() {
+        this.$emit("test")
+      },
       sizeExpend() {
         this.$emit("sizeExpend");
       },
@@ -98,9 +101,6 @@
       changeModelRunningStatus() {
         this.$emit('changeModelRunningStatus', !this.modelRunningStatus)
       },
-      testFlow() {
-        this.$emit('testFlow')
-      }
     }
   };
 </script>
