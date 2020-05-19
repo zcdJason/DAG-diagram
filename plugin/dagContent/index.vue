@@ -58,10 +58,17 @@
       DataAll: {
         type: Object,
         default: () => []
+      },
+      inputFlowStatus: {
+        type: Boolean,
+        default: false
       }
     },
 
     computed: {
+      modelRunningStatus() {
+        return this.inputFlowStatus
+      },
       svgScale() {
         return this.svg_scale || !!sessionStorage['svgScale'] ? sessionStorage['svgScale'] : 1
       }
@@ -432,7 +439,6 @@
        * 执行&暂停模型训练模拟
        */
       changeModelRunningStatus(status) {
-        this.modelRunningStatus = status;
         if (status) {
           this.$emit('updateDAG', this.DataAll, 'startRunning')
         } else {
@@ -445,7 +451,7 @@
       test() {
         this.$emit('updateDAG', this.DataAll, 'test')
       },
-       /**
+      /**
        * 数据层逻辑
        */
       // 模型激活
@@ -638,7 +644,6 @@
         },
         canMouseWheelUse: true,
         step: 0, // 模型训练计步
-        modelRunningStatus: false,
         nextStep: null,
         multipleSelectNodes: {},
         initMultiplePosition: {}
